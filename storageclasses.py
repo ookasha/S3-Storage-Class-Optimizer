@@ -1,12 +1,17 @@
-# want a header, Describing file title and description
-#S3 Storage Class ... by Omar Okasha
-#The goal behind this application is to assist clients in determining the most cost effective storage class option with data access and resiliency in mind
+
+#S3 Storage Class Optimizer by Omar Okasha
+#The goal behind this application is to assist clients in determining the most suitable storage class option with data access and resiliency in mind
 
 print("Welcome to the S3 Storage Class")
 print("This application is designed to assist you in determining the most cost effective S3 Storage class based on your needs")
 
+#Array is used here to store all the different S3 storage Classes 
 storageclasses = ["S3 Standard","S3 Intelligent-Tiering","S3 Standard-Infrequent Access","S3 One Zone-Infrequent Access",\
                   "S3 Glacier Instant Retrieval", "S3 Glacier Flexible Retrieval","S3 Glacier Deep Archive"]
+
+
+#Client will be prompted to answer several questions, based on the response, the code will only retain relevant Storage Classes in the Array
+#This filtering method will lead the client to the most suitable Storage Class
 
 while True:
     frequency = input("Firstly, will you be accessing your data frequently, infrequently or unknown? ").lower()
